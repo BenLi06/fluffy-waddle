@@ -25,11 +25,6 @@ class Benli06Player extends Player
       if (in_array($oppName, $dream_team))
         return parent::friendChoice();
 
-     // $oppName = $this->result->getStatsFor($this->opponentSide)['name'];
-     // if (in_array($oppName, $dream_team))
-       // return parent::friendChoice();
-
-
       //If point opponnent > point my => FOE
       if($this->result->getLastScoreFor($this->opponentSide) > $this->result->getLastScoreFor($this->mySide))
         return parent::foeChoice();
