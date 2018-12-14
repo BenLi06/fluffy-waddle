@@ -40,6 +40,10 @@ class Benli06Player extends Player
         // -------------------------------------    -----------------------------------------------------
         // How can i display the result of each round ? $this->prettyDisplay()
         // -------------------------------------    -----------------------------------------------------
+      //$this->prettyDisplay();
+      if($this->result->getLastScoreFor($this->opponentSide) > 50)
+        return parent::foeChoice();
+        
       if ($this->result->getLastChoiceFor($this->opponentSide))
         return parent::foeChoice();
         // -------------------------------------    -----------------------------------------------------
