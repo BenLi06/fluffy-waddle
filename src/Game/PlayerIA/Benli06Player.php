@@ -20,7 +20,7 @@ class Benli06Player extends Player
     {
       //$this->prettyDisplay();
 
-      $dream_team = array('PacoTheGreat', 'Sky555v', 'Felixdupriez', 'Shiinsekai', 'Ghope', 'Etienneelg', 'Christaupher', 'Galtar95');
+      $dream_team = array('PacoTheGreat', 'Sky555v', 'Kewynhe', 'Felixdupriez', 'Shiinsekai', 'Ghope', 'Etienneelg', 'Christaupher', 'Galtar95');
       $oppName = $this->result->getStatsFor($this->opponentSide)['name'];
       if (in_array($oppName, $dream_team))
         return parent::friendChoice();
