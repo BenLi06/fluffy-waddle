@@ -44,11 +44,11 @@ class Benli06Player extends Player
       if($this->result->getLastScoreFor($this->opponentSide) > 50)
         return parent::foeChoice();
         
-      if ($this->result->getLastChoiceFor($this->opponentSide))
-        return parent::foeChoice();
+      if (!$this->result->getLastChoiceFor($this->opponentSide))
+        return parent::friendChoice();
         // -------------------------------------    -----------------------------------------------------
  
-        return parent::friendChoice();
+      return parent::foeChoice();
     }
  
 };
